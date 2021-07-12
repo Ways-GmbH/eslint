@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-ways",
+  "version": "0.1.0",
+  "author": "Nico Hülscher <nico.huelscher@ways.de>",
+  "description": "Default Ways configuration for ESLint projects.",
+  "scripts": {
+    "test": "node ./index.js",
+    "prepublish": "npm test"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "default.yml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eslint/eslint"
+  },
+  "homepage": "https://www.unternehmerkraft.group/",
+  "peerDependencies": {
+    "eslint-plugin-jsdoc": ">=22.1.0",
+    "eslint-plugin-node": ">=11.1.0"
+  },
+  "keywords": [
+    "eslintconfig",
+    "eslint-config",
+    "eslint"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  }
+}
