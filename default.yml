@@ -1,17 +1,16 @@
 reportUnusedDisableDirectives: true
-extends:
-    - "eslint:recommended"
-    - "plugin:node/recommended"
-plugins:
-    - "jsdoc"
-settings:
-    jsdoc:
-        tagNamePreference:
-            file: "fileoverview"
-            augments: "extends"
-            class: "constructor"
-        preferredTypes:
-            object: "Object"
+ignorePatterns: ["**/node_modules/", "**/dist/", "**/build/", "**/*.config.js"]
+parser: "@typescript-eslint/parser"
+plugins: ["@typescript-eslint", "import", "jsdoc"]
+extends: ["plugin:import/recommended", "eslint:recommended", "plugin:react/recommended", "plugin:react/recommended", "plugin:jsx-a11y/recommended",]
+parserOptions:
+    ecmaFeatures:
+        jsx: true
+    ecmaVersion: 2020
+    sourceType: "module"
+env:
+    browser: true
+    node: true
 rules:
     array-bracket-spacing: "error"
     array-callback-return: "error"
@@ -21,8 +20,6 @@ rules:
     indent: ["error", 4, {SwitchCase: 1}]
     block-spacing: "error"
     brace-style: ["error", "1tbs"]
-    camelcase: "error"
-    class-methods-use-this: "error"
     comma-dangle: "error"
     comma-spacing: "error"
     comma-style: ["error", "last"]
@@ -37,7 +34,6 @@ rules:
     eol-last: "error"
     eqeqeq: "error"
     func-call-spacing: "error"
-    func-style: ["error", "declaration"]
     function-call-argument-newline: ["error", "consistent"]
     function-paren-newline: ["error", "consistent"]
     generator-star-spacing: "error"
@@ -53,13 +49,6 @@ rules:
     jsdoc/require-description: "error"
     jsdoc/require-hyphen-before-param-description: ["error", "never"]
     jsdoc/require-jsdoc: "error"
-    jsdoc/require-param: "error"
-    jsdoc/require-param-description: "error"
-    jsdoc/require-param-name: "error"
-    jsdoc/require-param-type: "error"
-    jsdoc/require-returns: ["error", { forceRequireReturn: true, forceReturnsWithAsync: true }]
-    jsdoc/require-returns-description: "error"
-    jsdoc/require-returns-type: "error"
     key-spacing: ["error", { beforeColon: false, afterColon: true }]
     keyword-spacing: "error"
     lines-around-comment: ["error", {
@@ -68,7 +57,8 @@ rules:
         beforeLineComment: true,
         afterLineComment: false
     }]
-    max-len: ["error", 160, {
+    max-classes-per-file: ["error", 2]
+    max-len: ["error", 140, {
         "ignoreComments": true,
         "ignoreUrls": true,
         "ignoreStrings": true,
@@ -76,6 +66,7 @@ rules:
         "ignoreRegExpLiterals": true
     }]
     max-statements-per-line: "error"
+    multiline-ternary: "error"
     new-cap: "error"
     new-parens: "error"
     no-alert: "error"
@@ -85,7 +76,7 @@ rules:
     no-console: "error"
     no-constructor-return: "error"
     no-delete-var: "error"
-    no-else-return: ["error", { allowElseIf: false }]
+    no-else-return: ["error"]
     no-eval: "error"
     no-extend-native: "error"
     no-extra-bind: "error"
@@ -140,8 +131,7 @@ rules:
     no-unneeded-ternary: "error"
     no-unreachable-loop: "error"
     no-unused-expressions: "error"
-    no-unused-vars: ["error", {vars: "all", args: "after-used", caughtErrors: "all"}]
-    no-use-before-define: "error"
+    no-unused-vars: ["error", {vars: "all", args: "after-used", argsIgnorePattern: "^_" }]
     no-useless-call: "error"
     no-useless-computed-key: "error"
     no-useless-concat: "error"
@@ -151,13 +141,6 @@ rules:
     no-useless-return: "error"
     no-whitespace-before-property: "error"
     no-var: "error"
-    node/callback-return: ["error", ["cb", "callback", "next"]]
-    node/handle-callback-err: ["error", "err"]
-    node/no-deprecated-api: "error"
-    node/no-mixed-requires: "error"
-    node/no-new-require: "error"
-    node/no-path-concat: "error"
-    node/no-process-exit: "error"
     object-curly-newline: ["error", { "consistent": true, "multiline": true }]
     object-curly-spacing: ["error", "always"]
     object-property-newline: ["error", { "allowAllPropertiesOnSameLine": true }]
@@ -214,3 +197,7 @@ rules:
     wrap-iife: "error"
     yield-star-spacing: "error"
     yoda: ["error", "never", { exceptRange: true }]
+settings:
+    import/resolver:
+      node:
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
