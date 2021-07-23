@@ -170,7 +170,7 @@ rules:
     prefer-rest-params: "error"
     prefer-spread: "error"
     prefer-template: "error"
-    quotes: ["error", "double", {avoidEscape: true}]
+    quotes: ["error", "single", {avoidEscape: true}]
     quote-props: ["error", "as-needed"]
     radix: "error"
     require-unicode-regexp: "error"
