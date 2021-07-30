@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ways",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Nico Hülscher <nico.huelscher@ways.de>",
   "description": "Default Ways configuration for ESLint projects.",
   "scripts": {
