@@ -24,7 +24,6 @@ rules:
     comma-spacing: "error"
     comma-style: ["error", "last"]
     computed-property-spacing: "error"
-    consistent-return: "error"
     curly: ["error", "all"]
     default-case: "error"
     default-case-last: "error"
@@ -94,7 +93,6 @@ rules:
     no-multi-spaces: "error"
     no-multi-str: "error"
     no-multiple-empty-lines: ["error", {max: 2, maxBOF: 0, maxEOF: 0}]
-    no-nested-ternary: "error"
     no-new: "error"
     no-new-func: "error"
     no-new-object: "error"
