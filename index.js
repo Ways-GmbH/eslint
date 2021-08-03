@@ -8,8 +8,6 @@ module.exports = {
     extends: ["./default.yml"],
     rules: {
       "@typescript-eslint/explicit-member-accessibility": "off",
-      "no-unused-vars": "off",
-      "@typescript-eslint/no-unused-vars": { vars: "all", args: "after-used", argsIgnorePattern: "^_" },
       "@typescript-eslint/no-shadow": [
         "error"
       ],
