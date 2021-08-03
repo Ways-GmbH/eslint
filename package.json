@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ways",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Nico Hülscher <nico.huelscher@ways.de>",
   "description": "Default Ways configuration for ESLint projects.",
   "scripts": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/Ways-GmbH/eslint"
   },
   "homepage": "https://www.ways.de/",
-  "peerDependencies": {
+  "dependencies": {
     "@typescript-eslint/parser": "^4.28.2",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsdoc": "^35.4.3",
