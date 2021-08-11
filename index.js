@@ -11,6 +11,21 @@ module.exports = {
       "@typescript-eslint/no-shadow": [
         "error"
       ],
+      "@typescript-eslint/member-ordering": {
+        "default": [
+          "public-static-method",
+          "protected-static-method",
+          "private-static-method",
+          "public-method",
+          "protected-method",
+          "private-method",
+          "static-method",
+          "instance-method",
+          "abstract-method",
+          "decorated-method",
+          "method"
+        ]
+      },
       "jsdoc/check-tag-names": "off",
     },
     overrides: [
