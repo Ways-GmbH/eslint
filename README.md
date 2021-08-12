@@ -1,10 +1,10 @@
 [![npm version][npm-image]][npm-url]
 
-# ESLint Configuration for Ways
+# ESLint Configuration for WAYS
 
 [Website](https://eslint.org) | [Configuring](https://eslint.org/docs/user-guide/configuring) | [Rules](https://eslint.org/docs/rules/) | [Contributing](https://eslint.org/docs/developer-guide/contributing)
 
-Contains the ESLint configuration used for projects maintained by the Ways team.
+Contains the ESLint configuration used for projects maintained by the WAYS team.
 
 ## Installation
 
